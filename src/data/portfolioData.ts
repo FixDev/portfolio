@@ -55,20 +55,20 @@ export const experiences = [
 export const projects = [
   {
     company:
-      "PT. Bank Rakyat Indonesia vendor by PT. Satkomindo Mediaya & PT. Tetamba Studio Kreasi",
+      "PT. Bank Rakyat Indonesia (via PT. Satkomindo Mediyasa & PT. Tetamba Studio Kreasi)",
     role: "Fullstack Developer",
     period: "March 2020 – December 2024",
     description: [
-      "Build system to help frontliner such as teller, customer services, and supervisor. This system was success replace the existing system that leak by UI/UX and to slow process. My contribution to the system is make micro frontend for easy development and easy deployment. ",
-      "After the system success implement to selindo (seluruh indonesia), i am move to another project, the project is cash management application, B2B system that using by company that use system to help them manage their cash flow, in this project my contribute is build micro frontend that help development and deployment, deliver 3 fitur crusial cash pooling, internal transfer, and eksternal transfer",
+      "Developed a system to support frontliners such as tellers, customer service officers, and supervisors. The new system successfully replaced the legacy application, which suffered from poor UI/UX and slow performance. My main contribution was implementing a micro frontend architecture to streamline development and deployment processes.",
+      "After the successful nationwide rollout (Selindo), I transitioned to a new project: a Cash Management Application (B2B system) used by corporate clients to manage their cash flow. I contributed to building the micro frontend structure and delivered three critical features: Cash Pooling, Internal Transfer, and External Transfer.",
     ],
   },
   {
-    company: "PT. Bank INA Perdana vendor by PT. Intikom Berlian Mustika",
+    company: "PT. Bank INA Perdana (via PT. Intikom Berlian Mustika)",
     role: "Frontend Developer",
-    period: "Januart 2025 – June 2025",
+    period: "January 2025 – June 2025",
     description: [
-      "Build system to help operation division. I success contribute to the project with the 5 fitur and success rate is 100% in production without any bugs in",
+      "Built a system to support the Operations Division. I successfully delivered five features, all deployed to production with a 100% success rate and no post-release bugs.",
     ],
   },
 ];
