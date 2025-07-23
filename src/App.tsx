@@ -31,9 +31,9 @@ function App() {
     <div className="max-w-4xl mx-auto px-4 py-6">
       <button
         onClick={() => setDarkMode(!darkMode)}
-        className="fixed top-4 right-4 text-xs bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded hover:scale-105 transition-transform cursor-pointer"
+        className="fixed top-4 right-4 text-2xl bg-transparent px-2 py-1 rounded hover:scale-150 animate-bounce transition-transform cursor-pointer"
       >
-        {darkMode ? "☀️ Light Mode" : "🌙 Dark Mode"}
+        {darkMode ? "☀️" : "🌙"}
       </button>
       <Header />
       <Section title="Summary">
