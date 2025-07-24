@@ -173,5 +173,3 @@ export const certificates = [
   "Participant – IT Network Support (Provincial)",
 ];
 
-export const contact =
-  "Email: fikri.muha28@gmail.com | WhatsApp: +62 896-4835-9414 | LinkedIn: linkedin.com/in/fikrimuha1";

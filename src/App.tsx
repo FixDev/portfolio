@@ -10,7 +10,6 @@ import {
   education,
   certificates,
   summary,
-  contact,
 } from "./data/portfolioData";
 import ProjectCard from "./components/ProjectCard";
 
@@ -114,7 +113,9 @@ function App() {
       </Section>
 
       <Section title="Contact">
-        <p className="text-sm">{contact}</p>
+        <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="text-4xl p-2 rounded-full bg-white border cursor-pointer animate-bounce">
+         🔝
+        </button>
       </Section>
       <Footer />
     </div>
