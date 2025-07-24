@@ -62,7 +62,7 @@ export const projects = [
       "Revamped a legacy system for frontliners with a modern micro frontend architecture, improving UI/UX and performance.",
       "Post-rollout, contributed to a B2B Cash Management App by delivering Cash Pooling, Internal Transfer, and External Transfer features.",
     ],
-    images: ["nds.png","/qlola.png"],
+    images: ["/nds.png", "/qlola.png", "dashboard-qlola.png"],
   },
   {
     company: "PT. Bank INA Perdana (via PT. Intikom Berlian Mustika)",
@@ -71,7 +71,7 @@ export const projects = [
     description: [
       "Developed an internal system for the Operations Division, delivering five production features with zero post-release bugs.",
     ],
-    images: ["/bina.png",'bina-ops.png'],
+    images: ["/bina.png", "bina-ops.png"],
   },
 ];
 
