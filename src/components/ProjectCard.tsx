@@ -11,6 +11,30 @@ type Project = {
   techStack?: string[];
 };
 
+// Fungsi untuk menentukan warna badge berdasarkan tech
+const getTechBadgeColor = (tech: string) => {
+  const map: Record<string, string> = {
+    React: "bg-blue-100 text-blue-800",
+    TypeScript: "bg-sky-100 text-sky-800",
+    JavaScript: "bg-yellow-100 text-yellow-800",
+    Node: "bg-green-100 text-green-800",
+    "Node.js": "bg-green-100 text-green-800",
+    Tailwind: "bg-teal-100 text-teal-800",
+    "Tailwind CSS": "bg-teal-100 text-teal-800",
+    GraphQL: "bg-pink-100 text-pink-800",
+    Redis: "bg-red-100 text-red-800",
+    PostgreSQL: "bg-indigo-100 text-indigo-800",
+    "Micro Frontend": "bg-purple-100 text-purple-800",
+    "CI/CD": "bg-gray-200 text-gray-700",
+    Kubernetes: "bg-cyan-100 text-cyan-800",
+    Vite: "bg-purple-100 text-purple-800",
+    Next: "bg-black text-white",
+    "Next.js": "bg-black text-white",
+  };
+
+  return map[tech] ?? "bg-gray-100 text-gray-800";
+};
+
 const ProjectCard = ({
   company,
   role,
@@ -116,7 +140,9 @@ const ProjectCard = ({
             {techStack.map((tech, i) => (
               <span
                 key={i}
-                className="text-xs bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-2 py-1 rounded"
+                className={`text-xs px-2 py-1 rounded-full font-medium ${getTechBadgeColor(
+                  tech
+                )}`}
               >
                 {tech}
               </span>
