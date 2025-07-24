@@ -10,6 +10,7 @@ export const experiences = [
       "Prepared materials and quizzes.",
       "Monitored student performance and gave feedback.",
     ],
+    techStack: ["CI/CD", "DevSecOps", "Soft Skill", "Public Speaking"],
   },
   {
     company: "PT. Intikom Berlian Mustika",
@@ -20,6 +21,7 @@ export const experiences = [
       "Integrated React + Vite + Redux to optimize performance.",
       "Improved state handling and data structure.",
     ],
+    techStack: ["React", "Vite", "Redux", "Ant Design", "CSS"],
   },
   {
     company: "PT. Satkomindo Mediyasa",
@@ -30,6 +32,7 @@ export const experiences = [
       "Built Go microservices with gRPC, Redis, RabbitMQ.",
       "Created reusable components and PWA support.",
     ],
+    techStack: ["Vue", "Go", "gRPC", "Redis", "RabbitMQ", "Micro Frontend", 'Quasar'],
   },
   {
     company: "PT. Tetamba Studio Kreasi",
@@ -40,6 +43,7 @@ export const experiences = [
       "Built UI base using Vue + Quasar.",
       "Implemented PWA and tested with Jest.",
     ],
+    techStack: ["Vue", "Quasar", "PWA", "Jest"],
   },
   {
     company: "PT. Solusi Aksesindo Pratama",
@@ -49,6 +53,7 @@ export const experiences = [
       "Set up networks and customer internet.",
       "Supported major events like Shopee and Microsoft.",
     ],
+    techStack: ["Networking", "On-site Support"],
   },
 ];
 

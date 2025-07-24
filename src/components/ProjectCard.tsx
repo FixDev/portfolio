@@ -11,28 +11,34 @@ type Project = {
   techStack?: string[];
 };
 
-// Fungsi untuk menentukan warna badge berdasarkan tech
 const getTechBadgeColor = (tech: string) => {
   const map: Record<string, string> = {
-    React: "bg-blue-100 text-blue-800",
-    TypeScript: "bg-sky-100 text-sky-800",
-    JavaScript: "bg-yellow-100 text-yellow-800",
-    Node: "bg-green-100 text-green-800",
-    "Node.js": "bg-green-100 text-green-800",
-    Tailwind: "bg-teal-100 text-teal-800",
-    "Tailwind CSS": "bg-teal-100 text-teal-800",
-    GraphQL: "bg-pink-100 text-pink-800",
-    Redis: "bg-red-100 text-red-800",
-    PostgreSQL: "bg-indigo-100 text-indigo-800",
-    "Micro Frontend": "bg-purple-100 text-purple-800",
-    "CI/CD": "bg-gray-200 text-gray-700",
-    Kubernetes: "bg-cyan-100 text-cyan-800",
-    Vite: "bg-purple-100 text-purple-800",
-    Next: "bg-black text-white",
-    "Next.js": "bg-black text-white",
+    React: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-100",
+    TypeScript: "bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-100",
+    JavaScript:
+      "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-100",
+    Node: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100",
+    "Node.js":
+      "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100",
+    Tailwind: "bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-100",
+    "Tailwind CSS":
+      "bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-100",
+    GraphQL: "bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-100",
+    Redis: "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-100",
+    PostgreSQL:
+      "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-100",
+    "Micro Frontend":
+      "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-100",
+    "CI/CD": "bg-gray-200 text-gray-700 dark:bg-gray-800 dark:text-gray-200",
+    Kubernetes: "bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-100",
+    Vite: "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-100",
+    Next: "bg-black text-white dark:bg-white dark:text-black",
+    "Next.js": "bg-black text-white dark:bg-white dark:text-black",
   };
 
-  return map[tech] ?? "bg-gray-100 text-gray-800";
+  return (
+    map[tech] ?? "bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-100"
+  );
 };
 
 const ProjectCard = ({
