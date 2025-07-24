@@ -1,5 +1,6 @@
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
+import { useState } from "react";
 
 type Project = {
   company: string;
@@ -7,6 +8,7 @@ type Project = {
   period: string;
   description: string[];
   images?: string[];
+  techStack?: string[];
 };
 
 const ProjectCard = ({
@@ -15,13 +17,19 @@ const ProjectCard = ({
   period,
   description,
   images,
+  techStack,
 }: Project) => {
-  const [sliderRef, slider] = useKeenSlider({
-    loop: true,
-    slides: {
-      perView: 1,
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [sliderRef, slider] = useKeenSlider<HTMLDivElement>(
+    {
+      loop: true,
+      slides: { perView: 1 },
+      slideChanged(slider) {
+        setCurrentSlide(slider.track.details.rel);
+      },
     },
-  });
+    []
+  );
 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md border dark:border-gray-700 mb-6 transition-all hover:scale-[1.02] overflow-hidden">
@@ -34,6 +42,7 @@ const ProjectCard = ({
           {period}
         </p>
       </div>
+
       {images?.length ? (
         <div className="relative">
           <div ref={sliderRef} className="keen-slider w-full bg-black">
@@ -45,7 +54,7 @@ const ProjectCard = ({
                 <img
                   src={src}
                   alt={`Preview ${idx + 1}`}
-                  className="object-contain"
+                  className="object-contain h-[300px] w-full"
                 />
               </div>
             ))}
@@ -57,13 +66,27 @@ const ProjectCard = ({
           >
             ◀
           </button>
-
           <button
             onClick={() => slider.current?.next()}
             className="absolute top-1/2 right-2 -translate-y-1/2 bg-white dark:bg-gray-700 p-2 rounded-full shadow hover:bg-gray-200 z-10"
           >
             ▶
           </button>
+
+          {/* Dots */}
+          <div className="flex justify-center gap-2 my-2">
+            {images.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => slider.current?.moveToIdx(idx)}
+                className={`w-2 h-2 rounded-full ${
+                  currentSlide === idx
+                    ? "bg-blue-500"
+                    : "bg-gray-300 dark:bg-gray-600"
+                }`}
+              />
+            ))}
+          </div>
         </div>
       ) : null}
 
@@ -73,6 +96,19 @@ const ProjectCard = ({
             <li key={i}>{desc}</li>
           ))}
         </ul>
+
+        {techStack?.length ? (
+          <div className="mt-4 flex flex-wrap gap-2">
+            {techStack.map((tech, i) => (
+              <span
+                key={i}
+                className="text-xs bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-2 py-1 rounded"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        ) : null}
       </div>
     </div>
   );

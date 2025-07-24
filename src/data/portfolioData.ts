@@ -62,6 +62,16 @@ export const projects = [
       "Revamped a legacy system for frontliners with a modern micro frontend architecture, improving UI/UX and performance.",
       "Post-rollout, contributed to a B2B Cash Management App by delivering Cash Pooling, Internal Transfer, and External Transfer features.",
     ],
+    techStack: [
+      "TypeScript",
+      "React",
+      "Micro Frontend",
+      "Node.js",
+      "PostgreSQL",
+      "Redis",
+      "Openshift",
+      "CI/CD",
+    ],
     images: ["/nds.png", "/qlola.png", "/dashboard-qlola.png"],
   },
   {
@@ -71,6 +81,14 @@ export const projects = [
     description: [
       "Developed an internal system for the Operations Division, delivering five production features with zero post-release bugs.",
     ],
+    techStack: [
+      "React",
+      "TypeScript",
+      "Redux Toolkit",
+      "REST API",
+      "Vitest",
+      "Vite",
+    ],
     images: ["/bina.png", "/bina-ops.png"],
   },
   {
@@ -79,9 +97,32 @@ export const projects = [
     period: "2024 – 2025",
     description: [
       "Develop landing page for crypto system from figma",
-      "Develop ui system for educational platfrorm from figma",
+      "Develop ui system for educational platform from figma",
     ],
-    images: ["/kidsloop.png", "/kidsloop-1.png", "/whatsapp-ai.png", "/whatsapp-ai-1.png", "/whatsapp-ai-2.png", "/whatsapp-ai-3.png", "/whatsapp-ai-4.png", "/whatsapp-ai-5.png", "/whatsapp-ai-6.png", "/whatsapp-ai-7.png", "/equinox-1.png", "/equinox-2.png","/equinox-3.png","/equinox-4.png",],
+    techStack: [
+      "Next.js",
+      "Tailwind CSS",
+      "TypeScript",
+      "Framer Motion",
+      "Figma to Code",
+      "Responsive Design",
+    ],
+    images: [
+      "/kidsloop.png",
+      "/kidsloop-1.png",
+      "/whatsapp-ai.png",
+      "/whatsapp-ai-1.png",
+      "/whatsapp-ai-2.png",
+      "/whatsapp-ai-3.png",
+      "/whatsapp-ai-4.png",
+      "/whatsapp-ai-5.png",
+      "/whatsapp-ai-6.png",
+      "/whatsapp-ai-7.png",
+      "/equinox-1.png",
+      "/equinox-2.png",
+      "/equinox-3.png",
+      "/equinox-4.png",
+    ],
   },
 ];
 
