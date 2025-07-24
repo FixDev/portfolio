@@ -12,6 +12,7 @@ import {
   summary,
   contact,
 } from "./data/portfolioData";
+import ProjectCard from "./components/ProjectCard";
 
 function App() {
   const getSystemTheme = () =>
@@ -49,30 +50,12 @@ function App() {
       <Section title="Projects">
         <p className="my-4">
           <b>
-            All project is private, i dont have any permission to showcase the
-            system.
+            All project is private, I don’t have permission to showcase the
+            system fully.
           </b>
         </p>
-        {projects.map((project, idx) => (
-          <div
-            key={idx}
-            className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-md dark:shadow-none border dark:border-gray-700 mb-4 transition-all hover:scale-[1.02]"
-          >
-            <h3 className="font-medium text-sm">
-              {project.role} –{" "}
-              <span className="text-gray-600 dark:text-gray-400">
-                {project.company}
-              </span>
-            </h3>
-            <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">
-              {project.period}
-            </p>
-            <ul className="text-sm text-gray-700 dark:text-gray-200 list-disc list-inside space-y-1">
-              {project.description.map((desc, i) => (
-                <li key={i}>{desc}</li>
-              ))}
-            </ul>
-          </div>
+        {projects.map((project, i) => (
+          <ProjectCard key={i} {...project} />
         ))}
       </Section>
       <Section title="Tech Stack">

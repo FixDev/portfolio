@@ -59,17 +59,19 @@ export const projects = [
     role: "Fullstack Developer",
     period: "March 2020 – December 2024",
     description: [
-      "Developed a system to support frontliners such as tellers, customer service officers, and supervisors. The new system successfully replaced the legacy application, which suffered from poor UI/UX and slow performance. My main contribution was implementing a micro frontend architecture to streamline development and deployment processes.",
-      "After the successful nationwide rollout (Selindo), I transitioned to a new project: a Cash Management Application (B2B system) used by corporate clients to manage their cash flow. I contributed to building the micro frontend structure and delivered three critical features: Cash Pooling, Internal Transfer, and External Transfer.",
+      "Revamped a legacy system for frontliners with a modern micro frontend architecture, improving UI/UX and performance.",
+      "Post-rollout, contributed to a B2B Cash Management App by delivering Cash Pooling, Internal Transfer, and External Transfer features.",
     ],
+    images: ["nds.png","/qlola.png"],
   },
   {
     company: "PT. Bank INA Perdana (via PT. Intikom Berlian Mustika)",
     role: "Frontend Developer",
     period: "January 2025 – June 2025",
     description: [
-      "Built a system to support the Operations Division. I successfully delivered five features, all deployed to production with a 100% success rate and no post-release bugs.",
+      "Developed an internal system for the Operations Division, delivering five production features with zero post-release bugs.",
     ],
+    images: ["/bina.png",'bina-ops.png'],
   },
 ];
 
