@@ -1,6 +1,6 @@
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 type Project = {
   company: string;
@@ -20,16 +20,30 @@ const ProjectCard = ({
   techStack,
 }: Project) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const timer = useRef<ReturnType<typeof setInterval> | null>(null);
+
   const [sliderRef, slider] = useKeenSlider<HTMLDivElement>(
     {
       loop: true,
       slides: { perView: 1 },
-      slideChanged(slider) {
-        setCurrentSlide(slider.track.details.rel);
+      slideChanged(s) {
+        setCurrentSlide(s.track.details.rel);
+      },
+      created(s) {
+        clearInterval(timer.current!);
+        timer.current = setInterval(() => {
+          s.next();
+        }, 5000);
       },
     },
     []
   );
+
+  useEffect(() => {
+    return () => {
+      if (timer.current) clearInterval(timer.current);
+    };
+  }, []);
 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md border dark:border-gray-700 mb-6 transition-all hover:scale-[1.02] overflow-hidden">
@@ -54,7 +68,7 @@ const ProjectCard = ({
                 <img
                   src={src}
                   alt={`Preview ${idx + 1}`}
-                  className="object-contain h-[300px] w-full"
+                  className="object-contain h-[500px]"
                 />
               </div>
             ))}
