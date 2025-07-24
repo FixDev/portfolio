@@ -92,7 +92,7 @@ const ProjectCard = ({
                 <img
                   src={src}
                   alt={`Preview ${idx + 1}`}
-                  className="object-contain h-[500px]"
+                  className="object-contain max-h[80vh] w-auto"
                 />
               </div>
             ))}
@@ -111,7 +111,6 @@ const ProjectCard = ({
             ▶
           </button>
 
-          {/* Dots */}
           <div className="flex justify-center gap-2 my-2">
             {images.map((_, idx) => (
               <button
