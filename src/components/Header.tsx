@@ -8,9 +8,6 @@ const Header = () => (
       <a href="mailto:fikri.muha28@gmail.com" className="underline">
         Email
       </a>
-      <a href="https://wa.me/6289648359414" className="underline">
-        WhatsApp
-      </a>
       <a
         href="https://www.linkedin.com/in/fikrimuha1"
         target="_blank"
